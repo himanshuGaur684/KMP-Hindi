@@ -25,10 +25,14 @@ kotlin {
 
     sourceSets {
         androidMain.dependencies {
-
+            implementation(libs.koin.android)
+            implementation(libs.koin.androidx.compose)
         }
         commonMain.dependencies {
-            //put your multiplatform dependencies here
+            implementation(libs.koin.core)
+
+            implementation(libs.androidx.lifecycle.viewmodel)
+            implementation(libs.androidx.lifecycle.runtime.compose)
         }
         iosMain.dependencies {
 
